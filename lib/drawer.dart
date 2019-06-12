@@ -1,0 +1,66 @@
+import 'package:charitree/charity-detail-page.dart';
+import 'package:charitree/chatpage.dart';
+import 'package:flutter/material.dart';
+import 'package:uni_links/uni_links.dart';
+import 'package:flutter/services.dart' show PlatformException;
+import 'dart:async';
+import 'package:charitree/charities_api.dart';
+
+class MenuDrawer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      // Add a ListView to the drawer. This ensures the user can scroll
+      // through the options in the drawer if there isn't enough vertical
+      // space to fit everything.
+      child: ListView(
+        // Important: Remove any padding from the ListView.
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          DrawerHeader(
+            child: Text(
+              'Uzair Qureshi',
+              style: TextStyle(color: Colors.white),
+            ),
+            decoration: BoxDecoration(
+              color: Colors.redAccent,
+            ),
+          ),
+          ListTile(
+            leading: Icon(Icons.explore),
+            title: Text('Explore'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => MovieDetailsPage(testMovie)));
+              // Update the state of the app
+              // ...
+              // Then close the drawer
+              //Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.monetization_on),
+            title: Text('Donations'),
+            onTap: () {
+              // Update the state of the app
+              // ...
+              // Then close the drawer
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.supervised_user_circle),
+            title: Text('Profile'),
+            onTap: () {
+              // Update the state of the app
+              // ...
+              // Then close the drawer
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
