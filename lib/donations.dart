@@ -17,6 +17,6 @@ class _DonationsListState extends State<DonationsList> {
           ],
         ),
       ),
-    )
+    );
   }
 }

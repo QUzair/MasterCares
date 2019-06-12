@@ -55,13 +55,21 @@ class MovieDetailsPage extends StatelessWidget {
                 leading: Icon(Icons.info),
                 title: Text('Donate to Conern Worldwide'),
               ),
-              CircularPercentIndicator(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                Icon(Icons.remove),
+                Padding(padding: EdgeInsets.symmetric(horizontal: 15),)
+                CircularPercentIndicator(
                       radius: (MediaQuery.of(context).size.width)*0.45,
                       lineWidth: 4.0,
                       percent: 0.90,
-                      center: new Text("£10.00",style: TextStyle(fontSize: 15, color: Colors.black26)),
+                      center: new Text("£10.00",style: TextStyle(fontSize: 40, color: Colors.black26)),
                       progressColor: Colors.green,
                     ),
+                    Padding(padding: EdgeInsets.symmetric(horizontal: 15),),
+                    Icon(Icons.add)
+              ],),
                     SizedBox(height: 20.0,),
               GestureDetector(
                 child: Image.asset('images/masterpass.png'),
