@@ -22,6 +22,7 @@ class Charity {
   final List<Campaign> campaigns;
 }
 
+
 class Campaign {
   Campaign({
     this.name,
@@ -30,4 +31,17 @@ class Campaign {
 
   final String name;
   final String avatarUrl;
+}
+
+class Donation {
+  Donation({
+    this.amount,
+    this.date,
+    this.charity,
+  });
+
+  final String charity;
+  final String date;
+  final String amount;
+
 }

@@ -59,7 +59,7 @@ class MovieDetailsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                 Icon(Icons.remove),
-                Padding(padding: EdgeInsets.symmetric(horizontal: 15),)
+                Padding(padding: EdgeInsets.symmetric(horizontal: 15),),
                 CircularPercentIndicator(
                       radius: (MediaQuery.of(context).size.width)*0.45,
                       lineWidth: 4.0,
